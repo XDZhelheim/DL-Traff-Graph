@@ -1,0 +1,185 @@
+data.shape (8064, 492)
+pred_SZTAXI_DCRNN_2205030946 training started Tue May  3 09:46:06 2022
+TRAIN XS.shape YS,shape (6428, 12, 492, 1) (6428, 12, 492, 1)
+Model Training Started ... Tue May  3 09:46:06 2022
+TIMESTEP_IN, TIMESTEP_OUT 12 12
+==========================================================================================
+Layer (type:depth-idx)                   Output Shape              Param #
+==========================================================================================
+├─DCGRU_Encoder: 1-1                     [2, 12, 492, 64]          --
+|    └─ModuleList: 2                     []                        --
+|    |    └─DCGRU_Cell: 3-1              [-1, 492, 64]             75,072
+|    |    └─DCGRU_Cell: 3-2              [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-3              [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-4              [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-5              [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-6              [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-7              [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-8              [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-9              [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-10             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-11             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-12             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-13             [-1, 492, 64]             147,648
+|    |    └─DCGRU_Cell: 3-14             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-15             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-16             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-17             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-18             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-19             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-20             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-21             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-22             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-23             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-24             [-1, 492, 64]             (recursive)
+├─DCGRU_Decoder: 1-2                     [-1, 492, 1]              --
+|    └─ModuleList: 2                     []                        --
+|    |    └─DCGRU_Cell: 3-25             [-1, 492, 64]             75,072
+|    |    └─DCGRU_Cell: 3-26             [-1, 492, 64]             147,648
+|    └─Linear: 2-1                       [-1, 492, 1]              65
+├─DCGRU_Decoder: 1-3                     [-1, 492, 1]              (recursive)
+|    └─ModuleList: 2                     []                        --
+|    |    └─DCGRU_Cell: 3-27             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-28             [-1, 492, 64]             (recursive)
+|    └─Linear: 2-2                       [-1, 492, 1]              (recursive)
+├─DCGRU_Decoder: 1-4                     [-1, 492, 1]              (recursive)
+|    └─ModuleList: 2                     []                        --
+|    |    └─DCGRU_Cell: 3-29             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-30             [-1, 492, 64]             (recursive)
+|    └─Linear: 2-3                       [-1, 492, 1]              (recursive)
+├─DCGRU_Decoder: 1-5                     [-1, 492, 1]              (recursive)
+|    └─ModuleList: 2                     []                        --
+|    |    └─DCGRU_Cell: 3-31             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-32             [-1, 492, 64]             (recursive)
+|    └─Linear: 2-4                       [-1, 492, 1]              (recursive)
+├─DCGRU_Decoder: 1-6                     [-1, 492, 1]              (recursive)
+|    └─ModuleList: 2                     []                        --
+|    |    └─DCGRU_Cell: 3-33             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-34             [-1, 492, 64]             (recursive)
+|    └─Linear: 2-5                       [-1, 492, 1]              (recursive)
+├─DCGRU_Decoder: 1-7                     [-1, 492, 1]              (recursive)
+|    └─ModuleList: 2                     []                        --
+|    |    └─DCGRU_Cell: 3-35             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-36             [-1, 492, 64]             (recursive)
+|    └─Linear: 2-6                       [-1, 492, 1]              (recursive)
+├─DCGRU_Decoder: 1-8                     [-1, 492, 1]              (recursive)
+|    └─ModuleList: 2                     []                        --
+|    |    └─DCGRU_Cell: 3-37             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-38             [-1, 492, 64]             (recursive)
+|    └─Linear: 2-7                       [-1, 492, 1]              (recursive)
+├─DCGRU_Decoder: 1-9                     [-1, 492, 1]              (recursive)
+|    └─ModuleList: 2                     []                        --
+|    |    └─DCGRU_Cell: 3-39             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-40             [-1, 492, 64]             (recursive)
+|    └─Linear: 2-8                       [-1, 492, 1]              (recursive)
+├─DCGRU_Decoder: 1-10                    [-1, 492, 1]              (recursive)
+|    └─ModuleList: 2                     []                        --
+|    |    └─DCGRU_Cell: 3-41             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-42             [-1, 492, 64]             (recursive)
+|    └─Linear: 2-9                       [-1, 492, 1]              (recursive)
+├─DCGRU_Decoder: 1-11                    [-1, 492, 1]              (recursive)
+|    └─ModuleList: 2                     []                        --
+|    |    └─DCGRU_Cell: 3-43             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-44             [-1, 492, 64]             (recursive)
+|    └─Linear: 2-10                      [-1, 492, 1]              (recursive)
+├─DCGRU_Decoder: 1-12                    [-1, 492, 1]              (recursive)
+|    └─ModuleList: 2                     []                        --
+|    |    └─DCGRU_Cell: 3-45             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-46             [-1, 492, 64]             (recursive)
+|    └─Linear: 2-11                      [-1, 492, 1]              (recursive)
+├─DCGRU_Decoder: 1-13                    [-1, 492, 1]              (recursive)
+|    └─ModuleList: 2                     []                        --
+|    |    └─DCGRU_Cell: 3-47             [-1, 492, 64]             (recursive)
+|    |    └─DCGRU_Cell: 3-48             [-1, 492, 64]             (recursive)
+|    └─Linear: 2-12                      [-1, 492, 1]              (recursive)
+==========================================================================================
+Total params: 445,505
+Trainable params: 445,505
+Non-trainable params: 0
+Total mult-adds (M): 0.00
+==========================================================================================
+Input size (MB): 0.02
+Forward/backward pass size (MB): 2.89
+Params size (MB): 1.70
+Estimated Total Size (MB): 4.61
+==========================================================================================
+XS_torch.shape:   torch.Size([6428, 12, 492, 1])
+YS_torch.shape:   torch.Size([6428, 12, 492, 1])
+LOSS is : MSE
+epoch 0 time used: 61  seconds  train loss: 0.6778671781335074 validation loss: 0.6859633519281796
+epoch 1 time used: 61  seconds  train loss: 0.6379868915969583 validation loss: 0.6591464488660518
+epoch 2 time used: 61  seconds  train loss: 0.6194261532928662 validation loss: 0.6481875626008902
+epoch 3 time used: 61  seconds  train loss: 0.6117127775976363 validation loss: 0.6453306402139996
+epoch 4 time used: 61  seconds  train loss: 0.6043972438294043 validation loss: 0.647974974776975
+epoch 5 time used: 61  seconds  train loss: 0.600315560656964 validation loss: 0.6349975617963877
+epoch 6 time used: 61  seconds  train loss: 0.5976726665859711 validation loss: 0.637361208004738
+epoch 7 time used: 61  seconds  train loss: 0.5940497949147122 validation loss: 0.639444674870268
+epoch 8 time used: 61  seconds  train loss: 0.5896576027442856 validation loss: 0.6342382508130809
+epoch 9 time used: 61  seconds  train loss: 0.5860794223897996 validation loss: 0.6341832140784952
+epoch 10 time used: 61  seconds  train loss: 0.581240832466489 validation loss: 0.6297082723076664
+epoch 11 time used: 61  seconds  train loss: 0.5815996825695038 validation loss: 0.6308362967339322
+epoch 12 time used: 61  seconds  train loss: 0.5758748073157341 validation loss: 0.6280237344366995
+epoch 13 time used: 61  seconds  train loss: 0.5750863479177439 validation loss: 0.6255857045970746
+epoch 14 time used: 61  seconds  train loss: 0.5718843694431853 validation loss: 0.6211062740923753
+epoch 15 time used: 61  seconds  train loss: 0.5701507059473062 validation loss: 0.6221083334429347
+epoch 16 time used: 61  seconds  train loss: 0.5671895410902639 validation loss: 0.6206004687802709
+epoch 17 time used: 61  seconds  train loss: 0.5636634421382486 validation loss: 0.6224841662307283
+epoch 18 time used: 61  seconds  train loss: 0.5616299797427095 validation loss: 0.6229006351523139
+epoch 19 time used: 61  seconds  train loss: 0.5597824112619478 validation loss: 0.6183289737250675
+epoch 20 time used: 61  seconds  train loss: 0.5564750262548032 validation loss: 0.6133070119577854
+epoch 21 time used: 61  seconds  train loss: 0.5558274314973297 validation loss: 0.6147714589365679
+epoch 22 time used: 61  seconds  train loss: 0.5537224686671457 validation loss: 0.6192816528514843
+epoch 23 time used: 61  seconds  train loss: 0.551152266360618 validation loss: 0.6218350228682086
+epoch 24 time used: 61  seconds  train loss: 0.549251999912696 validation loss: 0.6254916280063231
+epoch 25 time used: 61  seconds  train loss: 0.54794142205549 validation loss: 0.6171970056064093
+epoch 26 time used: 61  seconds  train loss: 0.5451505825156677 validation loss: 0.6171140639639613
+epoch 27 time used: 63  seconds  train loss: 0.5460455067466367 validation loss: 0.6145155455046032
+epoch 28 time used: 62  seconds  train loss: 0.5430866308181758 validation loss: 0.6121045190896561
+epoch 29 time used: 61  seconds  train loss: 0.5400162012783934 validation loss: 0.6153933399945349
+epoch 30 time used: 62  seconds  train loss: 0.5381559000415449 validation loss: 0.6149460783052207
+epoch 31 time used: 61  seconds  train loss: 0.5384331267554933 validation loss: 0.6116580731833159
+epoch 32 time used: 64  seconds  train loss: 0.5357116281053589 validation loss: 0.6182576489092698
+epoch 33 time used: 62  seconds  train loss: 0.5462529181925365 validation loss: 0.6153247750813688
+epoch 34 time used: 61  seconds  train loss: 0.5387876188093703 validation loss: 0.6143511106718832
+epoch 35 time used: 61  seconds  train loss: 0.5334653076033504 validation loss: 0.6136299945525269
+epoch 36 time used: 61  seconds  train loss: 0.5341926475676839 validation loss: 0.6229004376563266
+epoch 37 time used: 61  seconds  train loss: 0.5314443824470976 validation loss: 0.6143275580892515
+epoch 38 time used: 61  seconds  train loss: 0.5297562485907868 validation loss: 0.6092157876906703
+epoch 39 time used: 61  seconds  train loss: 0.551366707508798 validation loss: 0.6220163616968032
+epoch 40 time used: 61  seconds  train loss: 0.5446658158200564 validation loss: 0.610843071593574
+epoch 41 time used: 61  seconds  train loss: 0.5342000003898805 validation loss: 0.6152833765418968
+epoch 42 time used: 61  seconds  train loss: 0.5298503304952239 validation loss: 0.624820361831295
+epoch 43 time used: 61  seconds  train loss: 0.5301566764521565 validation loss: 0.6197636002924904
+epoch 44 time used: 61  seconds  train loss: 0.5252026018513046 validation loss: 0.6186462670416382
+epoch 45 time used: 61  seconds  train loss: 0.5242301416431009 validation loss: 0.6157225876008693
+epoch 46 time used: 61  seconds  train loss: 0.5234097990592886 validation loss: 0.6170058202980763
+epoch 47 time used: 61  seconds  train loss: 0.5229341304658317 validation loss: 0.6100530941688006
+Early stopping at epoch: 48
+YS.shape, YS_pred.shape, (6428, 12, 492, 1) (6428, 12, 492, 1)
+YS.shape, YS_pred.shape, (6428, 12, 492) (6428, 12, 492)
+****************************************
+DCRNN, train, Torch MSE, 5.1975967051e-01, 0.5197596705
+DCRNN, train, MSE, RMSE, MAE, MAPE, 20.8482724915, 4.5659908554, 3.4667482792, 30.9182696655
+Model Training Ended ... Tue May  3 10:37:39 2022
+pred_SZTAXI_DCRNN_2205030946 testing started Tue May  3 10:37:39 2022
+TEST XS.shape, YS.shape (1602, 12, 492, 1) (1602, 12, 492, 1)
+Model Testing Started ... Tue May  3 10:37:39 2022
+TIMESTEP_IN, TIMESTEP_OUT 12 12
+YS.shape, YS_pred.shape, (1602, 12, 492, 1) (1602, 12, 492, 1)
+YS.shape, YS_pred.shape, (1602, 12, 492) (1602, 12, 492)
+****************************************
+DCRNN, test, Torch MSE, 5.3277889612e-01, 0.5327788961
+all pred steps, DCRNN, test, MSE, RMSE, MAE, MAPE, 22.6581260840, 4.7600552606, 3.6318238947, 34.1757191049
+1 step, DCRNN, test, MSE, RMSE, MAE, MAPE, 18.7055995170, 4.3249970540, 3.3672531524, 32.1147024983
+2 step, DCRNN, test, MSE, RMSE, MAE, MAPE, 19.4570256669, 4.4110118643, 3.4197822952, 32.4956862712
+3 step, DCRNN, test, MSE, RMSE, MAE, MAPE, 20.0886081520, 4.4820316991, 3.4614087990, 32.8339558397
+4 step, DCRNN, test, MSE, RMSE, MAE, MAPE, 20.7639640373, 4.5567492840, 3.5056714626, 33.1679894493
+5 step, DCRNN, test, MSE, RMSE, MAE, MAPE, 21.5428804800, 4.6414308656, 3.5588788516, 33.5938619725
+6 step, DCRNN, test, MSE, RMSE, MAE, MAPE, 22.3411259282, 4.7266400252, 3.6127816567, 34.0184714963
+7 step, DCRNN, test, MSE, RMSE, MAE, MAPE, 23.0797957601, 4.8041436032, 3.6634730032, 34.4207449998
+8 step, DCRNN, test, MSE, RMSE, MAE, MAPE, 23.8462527817, 4.8832625141, 3.7127905412, 34.8156628921
+9 step, DCRNN, test, MSE, RMSE, MAE, MAPE, 24.5230501838, 4.9520753411, 3.7563763469, 35.1556860072
+10 step, DCRNN, test, MSE, RMSE, MAE, MAPE, 25.2535962552, 5.0252956386, 3.8055958774, 35.5456090590
+11 step, DCRNN, test, MSE, RMSE, MAE, MAPE, 25.9144835822, 5.0906270323, 3.8446910695, 35.8625884483
+12 step, DCRNN, test, MSE, RMSE, MAE, MAPE, 26.4368444891, 5.1416772058, 3.8768645325, 36.1127019177
+Model Testing Ended ... Tue May  3 10:37:56 2022

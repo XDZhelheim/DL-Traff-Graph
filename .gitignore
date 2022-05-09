@@ -1,0 +1,6 @@
+SZTAXI/
+.vscode/
+save/
+# log*
+__pycache__/
+nohup.out
