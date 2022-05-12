@@ -171,7 +171,9 @@ parser.add_argument("-k", type=int, required=True)
 parser.add_argument("-g", type=int, required=True)
 args=parser.parse_args()
 if args.k==-1:
-    ADJPATH=f"../SZTAXI/adj_mx.npy"
+    ADJPATH="../SZTAXI/adj_mx.npy"
+if args.k==0:
+    ADJPATH="../SZTAXI/cor_matrix.npy"
 else:
     ADJPATH=f"../SZTAXI/adj_{args.k}.npy"
 TIMESTEP_OUT=args.t

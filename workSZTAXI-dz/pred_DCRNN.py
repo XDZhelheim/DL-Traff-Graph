@@ -197,6 +197,9 @@ def main():
     shutil.copy2('DCRNN.py', PATH)
     shutil.copy2('Param.py', PATH)
     
+    print(FLOWPATH)
+    print(ADJPATH)
+    
     print(KEYWORD, 'training started', time.ctime())
     trainXS, trainYS = getXSYS(data, 'TRAIN')
     print('TRAIN XS.shape YS,shape', trainXS.shape, trainYS.shape)
