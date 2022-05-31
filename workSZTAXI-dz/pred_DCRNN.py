@@ -172,7 +172,35 @@ def testModel(name, mode, XS, YS):
     print('Model Testing Ended ...', time.ctime())
         
 ################# Parameter Setting #######################
-# FLOWPATH = '../SZTAXI/SZTAXI-flow.pkl' #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+import argparse
+parser=argparse.ArgumentParser()
+parser.add_argument("-k", type=int, required=True)
+parser.add_argument("-g", type=int, required=True)
+parser.add_argument("-f", type=str, required=True)
+args=parser.parse_args()
+if args.k==0:
+    ADJPATH="../SZTAXI/adj_mx.npy"
+elif args.k==-1:
+    ADJPATH="../SZTAXI/cor_matrix.npy"
+elif args.k==-2:
+    ADJPATH="../SZTAXI/OD_matrix.npy"
+elif args.k==-3:
+    ADJPATH=f"../SZTAXI/{args.f}_pearson.npy"
+elif args.k==-4:
+    ADJPATH=f"../SZTAXI/{args.f}_cosine.npy"
+elif args.k==-5:
+    ADJPATH=f"../SZTAXI/{args.f}_DTW.npy"
+else:
+    ADJPATH=f"../SZTAXI/adj_{args.k}.npy"
+
+if args.f=="flow":
+    FLOWPATH = '../SZTAXI/SZTAXI-flow.pkl'
+elif args.f=="speed":
+    FLOWPATH = '../SZTAXI/SZTAXI-speed.pkl'
+    
+GPU = args.g
+device = torch.device("cuda:{}".format(GPU)) if torch.cuda.is_available() else torch.device("cpu")
+
 MODELNAME = 'DCRNN'
 KEYWORD = 'pred_' + DATANAME + '_' + MODELNAME + '_' + datetime.now().strftime("%y%m%d%H%M")
 PATH = '../save/' + KEYWORD
@@ -180,10 +208,9 @@ torch.manual_seed(100)
 torch.cuda.manual_seed(100)
 np.random.seed(100)
 # torch.backends.cudnn.deterministic = True
-########################################################### 
-GPU = sys.argv[-1] if len(sys.argv) == 2 else '3'
-device = torch.device("cuda:{}".format(GPU)) if torch.cuda.is_available() else torch.device("cpu")
 ###########################################################
+print(FLOWPATH)
+print(ADJPATH)
 data = pd.read_pickle(FLOWPATH).values
 scaler = StandardScaler()
 data = scaler.fit_transform(data)
@@ -196,9 +223,6 @@ def main():
     shutil.copy2(currentPython, PATH)
     shutil.copy2('DCRNN.py', PATH)
     shutil.copy2('Param.py', PATH)
-    
-    print(FLOWPATH)
-    print(ADJPATH)
     
     print(KEYWORD, 'training started', time.ctime())
     trainXS, trainYS = getXSYS(data, 'TRAIN')

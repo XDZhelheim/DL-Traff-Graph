@@ -54,7 +54,7 @@ def MAPE(y_true, y_pred, null_val=0):
             mask = np.not_equal(y_true, null_val)
         mask = mask.astype('float32')
         mask /= np.mean(mask)
-        mape = np.abs(np.divide((y_pred - y_true).astype('float32'), y_true))
+        mape = np.abs(np.divide((y_pred - y_true).astype('float32'), y_true.astype('float32')))
         mape = np.nan_to_num(mask * mape)
         return np.mean(mape) * 100
     

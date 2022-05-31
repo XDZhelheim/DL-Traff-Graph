@@ -137,6 +137,10 @@ def weight_matrix(W, sigma2=0.1, epsilon=0.5):
     W[W==0]=np.inf
     W2 = W * W
     W_mask = (np.ones([n, n]) - np.identity(n))
+    # print(W_mask)
+    # epsilon=0.1
+    # print((np.exp(-W2 / sigma2) >= epsilon))
+    # exit()
     return np.exp(-W2 / sigma2) * (np.exp(-W2 / sigma2) >= epsilon) * W_mask
 
 def scaled_laplacian(A):
