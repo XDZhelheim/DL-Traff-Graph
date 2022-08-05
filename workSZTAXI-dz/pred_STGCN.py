@@ -174,9 +174,9 @@ args=parser.parse_args()
 if args.k==0:
     ADJPATH="../SZTAXI/adj_mx.npy"
 elif args.k==-1:
-    ADJPATH="../SZTAXI/cor_matrix.npy"
+    ADJPATH="../SZTAXI/cor_matrix_relu_sm.npy"
 elif args.k==-2:
-    ADJPATH="../SZTAXI/OD_matrix.npy"
+    ADJPATH="../SZTAXI/OD_matrix_5.npy"
 elif args.k==-3:
     ADJPATH=f"../SZTAXI/{args.f}_pearson.npy"
 elif args.k==-4:

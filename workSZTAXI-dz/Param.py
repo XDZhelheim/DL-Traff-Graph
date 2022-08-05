@@ -14,8 +14,12 @@ LOSS = 'MSE'
 TRAINRATIO = 0.8 # TRAIN + VAL
 TRAINVALSPLIT = 0.125 # val_ratio = 0.8 * 0.125 = 0.1
 FLOWPATH = '../SZTAXI/SZTAXI-flow.pkl'
-ADJPATH = '../SZTAXI/OD_matrix.npy'
+ADJPATH = '../SZTAXI/adj_mx.npy'
 ADJTYPE = 'doubletransition'
 
 HISTORYDAY = 7
 DAYTIMESTEP = 24 * 12
+
+WEEK = 2 
+DAY = 1 
+HOUR = 2

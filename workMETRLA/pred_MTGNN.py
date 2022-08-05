@@ -68,6 +68,7 @@ def getXSYS(data, mode):
     return XS, YS
 
 def getModel(name):
+    adj = np.load(ADJPATH)
     model = gtnet(gcn_true=True,
                   buildA_true=True,
                   gcn_depth=2,
