@@ -218,6 +218,7 @@ parser=argparse.ArgumentParser()
 parser.add_argument("-k", type=int, required=True)
 parser.add_argument("-g", type=int, required=True)
 parser.add_argument("-f", type=str, required=True)
+parser.add_argument("-w", type=int, required=False)
 args=parser.parse_args()
 if args.k==0:
     ADJPATH="../SZTAXI/adj_mx.npy"
@@ -231,8 +232,13 @@ elif args.k==-4:
     ADJPATH=f"../SZTAXI/{args.f}_cosine.npy"
 elif args.k==-5:
     ADJPATH=f"../SZTAXI/{args.f}_DTW.npy"
-else:
+elif args.k>0:
     ADJPATH=f"../SZTAXI/adj_{args.k}.npy"
+
+if args.w:
+    ADJPATH=f"../SZTAXI/cor_matrix_w{args.w}.npy"
+# if args.w:
+#     ADJPATH=f"../SZTAXI/cor_matrix_relu_sm_w{args.w}.npy"
 
 if args.f=="flow":
     FLOWPATH = '../SZTAXI/SZTAXI-flow.pkl'

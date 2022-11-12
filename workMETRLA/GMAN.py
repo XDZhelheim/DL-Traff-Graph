@@ -84,6 +84,7 @@ class STEmbedding(nn.Module):
         self.device = device
 
     def forward(self, SE, TE, T=288):
+        print("*"*50, TE.shape, SE.shape)
         # spatial embedding
         SE = SE.unsqueeze(0).unsqueeze(0)
         SE = self.FC_se(SE)
@@ -97,6 +98,7 @@ class STEmbedding(nn.Module):
         TE = torch.cat((dayofweek, timeofday), dim=-1)
         TE = TE.unsqueeze(dim=2).to(device=self.device)
         TE = self.FC_te(TE)
+        print("*"*50, TE.shape, SE.shape)
         del dayofweek, timeofday
         return SE + TE
     

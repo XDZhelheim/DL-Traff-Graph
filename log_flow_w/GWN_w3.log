@@ -1,0 +1,252 @@
+../SZTAXI/SZTAXI-flow.pkl
+../SZTAXI/cor_matrix_w3.npy
+data.shape (8064, 492)
+pred_SZTAXI_GraphWaveNet_2211111046 training started Fri Nov 11 10:46:51 2022
+TRAIN XS.shape YS,shape (6428, 1, 492, 12) (6428, 12, 492, 1)
+Model Training Started ... Fri Nov 11 10:46:51 2022
+TIMESTEP_IN, TIMESTEP_OUT 12 12
+==========================================================================================
+Layer (type:depth-idx)                   Output Shape              Param #
+==========================================================================================
+├─Conv2d: 1-1                            [-1, 32, 492, 13]         64
+├─ModuleList: 1                          []                        --
+|    └─Conv2d: 2-1                       [-1, 32, 492, 12]         2,080
+├─ModuleList: 1                          []                        --
+|    └─Conv1d: 2-2                       [-1, 32, 492, 12]         2,080
+├─ModuleList: 1                          []                        --
+|    └─Conv1d: 2-3                       [-1, 256, 492, 12]        8,448
+├─ModuleList: 1                          []                        --
+|    └─gcn: 2-4                          [-1, 32, 492, 12]         --
+|    |    └─nconv: 3-1                   [-1, 32, 492, 12]         --
+|    |    └─nconv: 3-2                   [-1, 32, 492, 12]         --
+|    |    └─nconv: 3-3                   [-1, 32, 492, 12]         --
+|    |    └─nconv: 3-4                   [-1, 32, 492, 12]         --
+|    |    └─linear: 3-5                  [-1, 32, 492, 12]         5,152
+├─ModuleList: 1                          []                        --
+|    └─BatchNorm2d: 2-5                  [-1, 32, 492, 12]         64
+├─ModuleList: 1                          []                        --
+|    └─Conv2d: 2-6                       [-1, 32, 492, 10]         2,080
+├─ModuleList: 1                          []                        --
+|    └─Conv1d: 2-7                       [-1, 32, 492, 10]         2,080
+├─ModuleList: 1                          []                        --
+|    └─Conv1d: 2-8                       [-1, 256, 492, 10]        8,448
+├─ModuleList: 1                          []                        --
+|    └─gcn: 2-9                          [-1, 32, 492, 10]         --
+|    |    └─nconv: 3-6                   [-1, 32, 492, 10]         --
+|    |    └─nconv: 3-7                   [-1, 32, 492, 10]         --
+|    |    └─nconv: 3-8                   [-1, 32, 492, 10]         --
+|    |    └─nconv: 3-9                   [-1, 32, 492, 10]         --
+|    |    └─linear: 3-10                 [-1, 32, 492, 10]         5,152
+├─ModuleList: 1                          []                        --
+|    └─BatchNorm2d: 2-10                 [-1, 32, 492, 10]         64
+├─ModuleList: 1                          []                        --
+|    └─Conv2d: 2-11                      [-1, 32, 492, 9]          2,080
+├─ModuleList: 1                          []                        --
+|    └─Conv1d: 2-12                      [-1, 32, 492, 9]          2,080
+├─ModuleList: 1                          []                        --
+|    └─Conv1d: 2-13                      [-1, 256, 492, 9]         8,448
+├─ModuleList: 1                          []                        --
+|    └─gcn: 2-14                         [-1, 32, 492, 9]          --
+|    |    └─nconv: 3-11                  [-1, 32, 492, 9]          --
+|    |    └─nconv: 3-12                  [-1, 32, 492, 9]          --
+|    |    └─nconv: 3-13                  [-1, 32, 492, 9]          --
+|    |    └─nconv: 3-14                  [-1, 32, 492, 9]          --
+|    |    └─linear: 3-15                 [-1, 32, 492, 9]          5,152
+├─ModuleList: 1                          []                        --
+|    └─BatchNorm2d: 2-15                 [-1, 32, 492, 9]          64
+├─ModuleList: 1                          []                        --
+|    └─Conv2d: 2-16                      [-1, 32, 492, 7]          2,080
+├─ModuleList: 1                          []                        --
+|    └─Conv1d: 2-17                      [-1, 32, 492, 7]          2,080
+├─ModuleList: 1                          []                        --
+|    └─Conv1d: 2-18                      [-1, 256, 492, 7]         8,448
+├─ModuleList: 1                          []                        --
+|    └─gcn: 2-19                         [-1, 32, 492, 7]          --
+|    |    └─nconv: 3-16                  [-1, 32, 492, 7]          --
+|    |    └─nconv: 3-17                  [-1, 32, 492, 7]          --
+|    |    └─nconv: 3-18                  [-1, 32, 492, 7]          --
+|    |    └─nconv: 3-19                  [-1, 32, 492, 7]          --
+|    |    └─linear: 3-20                 [-1, 32, 492, 7]          5,152
+├─ModuleList: 1                          []                        --
+|    └─BatchNorm2d: 2-20                 [-1, 32, 492, 7]          64
+├─ModuleList: 1                          []                        --
+|    └─Conv2d: 2-21                      [-1, 32, 492, 6]          2,080
+├─ModuleList: 1                          []                        --
+|    └─Conv1d: 2-22                      [-1, 32, 492, 6]          2,080
+├─ModuleList: 1                          []                        --
+|    └─Conv1d: 2-23                      [-1, 256, 492, 6]         8,448
+├─ModuleList: 1                          []                        --
+|    └─gcn: 2-24                         [-1, 32, 492, 6]          --
+|    |    └─nconv: 3-21                  [-1, 32, 492, 6]          --
+|    |    └─nconv: 3-22                  [-1, 32, 492, 6]          --
+|    |    └─nconv: 3-23                  [-1, 32, 492, 6]          --
+|    |    └─nconv: 3-24                  [-1, 32, 492, 6]          --
+|    |    └─linear: 3-25                 [-1, 32, 492, 6]          5,152
+├─ModuleList: 1                          []                        --
+|    └─BatchNorm2d: 2-25                 [-1, 32, 492, 6]          64
+├─ModuleList: 1                          []                        --
+|    └─Conv2d: 2-26                      [-1, 32, 492, 4]          2,080
+├─ModuleList: 1                          []                        --
+|    └─Conv1d: 2-27                      [-1, 32, 492, 4]          2,080
+├─ModuleList: 1                          []                        --
+|    └─Conv1d: 2-28                      [-1, 256, 492, 4]         8,448
+├─ModuleList: 1                          []                        --
+|    └─gcn: 2-29                         [-1, 32, 492, 4]          --
+|    |    └─nconv: 3-26                  [-1, 32, 492, 4]          --
+|    |    └─nconv: 3-27                  [-1, 32, 492, 4]          --
+|    |    └─nconv: 3-28                  [-1, 32, 492, 4]          --
+|    |    └─nconv: 3-29                  [-1, 32, 492, 4]          --
+|    |    └─linear: 3-30                 [-1, 32, 492, 4]          5,152
+├─ModuleList: 1                          []                        --
+|    └─BatchNorm2d: 2-30                 [-1, 32, 492, 4]          64
+├─ModuleList: 1                          []                        --
+|    └─Conv2d: 2-31                      [-1, 32, 492, 3]          2,080
+├─ModuleList: 1                          []                        --
+|    └─Conv1d: 2-32                      [-1, 32, 492, 3]          2,080
+├─ModuleList: 1                          []                        --
+|    └─Conv1d: 2-33                      [-1, 256, 492, 3]         8,448
+├─ModuleList: 1                          []                        --
+|    └─gcn: 2-34                         [-1, 32, 492, 3]          --
+|    |    └─nconv: 3-31                  [-1, 32, 492, 3]          --
+|    |    └─nconv: 3-32                  [-1, 32, 492, 3]          --
+|    |    └─nconv: 3-33                  [-1, 32, 492, 3]          --
+|    |    └─nconv: 3-34                  [-1, 32, 492, 3]          --
+|    |    └─linear: 3-35                 [-1, 32, 492, 3]          5,152
+├─ModuleList: 1                          []                        --
+|    └─BatchNorm2d: 2-35                 [-1, 32, 492, 3]          64
+├─ModuleList: 1                          []                        --
+|    └─Conv2d: 2-36                      [-1, 32, 492, 1]          2,080
+├─ModuleList: 1                          []                        --
+|    └─Conv1d: 2-37                      [-1, 32, 492, 1]          2,080
+├─ModuleList: 1                          []                        --
+|    └─Conv1d: 2-38                      [-1, 256, 492, 1]         8,448
+├─ModuleList: 1                          []                        --
+|    └─gcn: 2-39                         [-1, 32, 492, 1]          --
+|    |    └─nconv: 3-36                  [-1, 32, 492, 1]          --
+|    |    └─nconv: 3-37                  [-1, 32, 492, 1]          --
+|    |    └─nconv: 3-38                  [-1, 32, 492, 1]          --
+|    |    └─nconv: 3-39                  [-1, 32, 492, 1]          --
+|    |    └─linear: 3-40                 [-1, 32, 492, 1]          5,152
+├─ModuleList: 1                          []                        --
+|    └─BatchNorm2d: 2-40                 [-1, 32, 492, 1]          64
+├─Conv2d: 1-2                            [-1, 512, 492, 1]         131,584
+├─Conv2d: 1-3                            [-1, 12, 492, 1]          6,156
+==========================================================================================
+Total params: 280,396
+Trainable params: 280,396
+Non-trainable params: 0
+Total mult-adds (M): 513.16
+==========================================================================================
+Input size (MB): 0.02
+Forward/backward pass size (MB): 78.48
+Params size (MB): 1.07
+Estimated Total Size (MB): 79.57
+==========================================================================================
+XS_torch.shape:   torch.Size([6428, 1, 492, 12])
+YS_torch.shape:   torch.Size([6428, 12, 492, 1])
+LOSS is : MSE
+epoch 0 time used: 27  seconds  train loss: 0.6791955615429587 validation loss: 0.6814654484317078
+epoch 1 time used: 28  seconds  train loss: 0.6440017284828093 validation loss: 0.6750433889787588
+epoch 2 time used: 28  seconds  train loss: 0.6313538731077148 validation loss: 0.6730654210000488
+epoch 3 time used: 28  seconds  train loss: 0.6240791192180232 validation loss: 0.6968721957942147
+epoch 4 time used: 28  seconds  train loss: 0.6211781789194978 validation loss: 0.6553087187050587
+epoch 5 time used: 28  seconds  train loss: 0.6148006853304411 validation loss: 0.6524650315147135
+epoch 6 time used: 28  seconds  train loss: 0.6119532299414807 validation loss: 0.6682760140196008
+epoch 7 time used: 28  seconds  train loss: 0.6098975659603754 validation loss: 0.6459571281772348
+epoch 8 time used: 28  seconds  train loss: 0.607814557013098 validation loss: 0.6503862507307707
+epoch 9 time used: 28  seconds  train loss: 0.6070946380390042 validation loss: 0.6536929542152443
+epoch 10 time used: 28  seconds  train loss: 0.6041988197973748 validation loss: 0.6424798986211938
+epoch 11 time used: 28  seconds  train loss: 0.6010167689445517 validation loss: 0.649743733121388
+epoch 12 time used: 28  seconds  train loss: 0.6002362246703288 validation loss: 0.6391849927048185
+epoch 13 time used: 28  seconds  train loss: 0.5995480028613024 validation loss: 0.6458320089833653
+epoch 14 time used: 28  seconds  train loss: 0.598774620428533 validation loss: 0.6634991987427669
+epoch 15 time used: 28  seconds  train loss: 0.6006357083110349 validation loss: 0.6363829178596611
+epoch 16 time used: 28  seconds  train loss: 0.5970009600115704 validation loss: 0.6368768376794027
+epoch 17 time used: 28  seconds  train loss: 0.5956327123289258 validation loss: 0.6558836895731551
+epoch 18 time used: 28  seconds  train loss: 0.5943796402784025 validation loss: 0.6444760391961283
+epoch 19 time used: 28  seconds  train loss: 0.5929071324987398 validation loss: 0.637868878408451
+epoch 20 time used: 28  seconds  train loss: 0.5942193762336991 validation loss: 0.6627912930588225
+epoch 21 time used: 28  seconds  train loss: 0.5907603759599445 validation loss: 0.6385505832546386
+epoch 22 time used: 28  seconds  train loss: 0.5911951707742292 validation loss: 0.6394897613359328
+epoch 23 time used: 28  seconds  train loss: 0.5892131952608632 validation loss: 0.6350240612504494
+epoch 24 time used: 28  seconds  train loss: 0.5880976511777549 validation loss: 0.6396345890576567
+epoch 25 time used: 28  seconds  train loss: 0.5870523157279149 validation loss: 0.6327022963495397
+epoch 26 time used: 28  seconds  train loss: 0.5852242745512071 validation loss: 0.6363718497812452
+epoch 27 time used: 28  seconds  train loss: 0.5845880930657746 validation loss: 0.6341572380184535
+epoch 28 time used: 28  seconds  train loss: 0.582469037679656 validation loss: 0.6299396501251714
+epoch 29 time used: 28  seconds  train loss: 0.5837067988824369 validation loss: 0.6325270251848212
+epoch 30 time used: 28  seconds  train loss: 0.5823071608333127 validation loss: 0.6280284915397416
+epoch 31 time used: 28  seconds  train loss: 0.5802049802173761 validation loss: 0.6345264526148934
+epoch 32 time used: 28  seconds  train loss: 0.580116555497453 validation loss: 0.631422206833588
+epoch 33 time used: 28  seconds  train loss: 0.5787287284520748 validation loss: 0.6364980772953128
+epoch 34 time used: 28  seconds  train loss: 0.5777563454416365 validation loss: 0.6369085807112319
+epoch 35 time used: 28  seconds  train loss: 0.5767664246335308 validation loss: 0.6285162550299915
+epoch 36 time used: 28  seconds  train loss: 0.5745402911987956 validation loss: 0.6260363612305465
+epoch 37 time used: 28  seconds  train loss: 0.5727523416068782 validation loss: 0.6239528829482064
+epoch 38 time used: 28  seconds  train loss: 0.573702035130003 validation loss: 0.6286236821715512
+epoch 39 time used: 28  seconds  train loss: 0.572913069007746 validation loss: 0.6248794023077286
+epoch 40 time used: 28  seconds  train loss: 0.5701669227347774 validation loss: 0.6322350407121193
+epoch 41 time used: 28  seconds  train loss: 0.5695651819661874 validation loss: 0.6265760194602891
+epoch 42 time used: 28  seconds  train loss: 0.5686316886124536 validation loss: 0.6281445613547937
+epoch 43 time used: 28  seconds  train loss: 0.5675273800472785 validation loss: 0.6299531658490499
+epoch 44 time used: 28  seconds  train loss: 0.5654127909821772 validation loss: 0.6256950359735916
+epoch 45 time used: 28  seconds  train loss: 0.5656512835795645 validation loss: 0.6236273575184951
+epoch 46 time used: 28  seconds  train loss: 0.566369742833364 validation loss: 0.6279638338444838
+epoch 47 time used: 27  seconds  train loss: 0.5635615049690474 validation loss: 0.6209912833882801
+epoch 48 time used: 27  seconds  train loss: 0.5593675393637688 validation loss: 0.625748098489657
+epoch 49 time used: 28  seconds  train loss: 0.5586184776185417 validation loss: 0.6208382503903327
+epoch 50 time used: 28  seconds  train loss: 0.5568221963486325 validation loss: 0.6210726799063422
+epoch 51 time used: 28  seconds  train loss: 0.5574749692914157 validation loss: 0.625722754357466
+epoch 52 time used: 28  seconds  train loss: 0.5661154275768003 validation loss: 0.6226455441754849
+epoch 53 time used: 28  seconds  train loss: 0.5577346885187358 validation loss: 0.622618123666564
+epoch 54 time used: 28  seconds  train loss: 0.5537213418595652 validation loss: 0.6205020858280694
+epoch 55 time used: 28  seconds  train loss: 0.5519034296147006 validation loss: 0.6154026658973883
+epoch 56 time used: 28  seconds  train loss: 0.5525582872786868 validation loss: 0.6218631492918404
+epoch 57 time used: 28  seconds  train loss: 0.5506346252022224 validation loss: 0.6318577820092292
+epoch 58 time used: 28  seconds  train loss: 0.5498273921216366 validation loss: 0.6208650339302139
+epoch 59 time used: 27  seconds  train loss: 0.5485490341783418 validation loss: 0.6287611017179726
+epoch 60 time used: 28  seconds  train loss: 0.54996273680398 validation loss: 0.6144050727436199
+epoch 61 time used: 28  seconds  train loss: 0.5472452903370429 validation loss: 0.6215587932968614
+epoch 62 time used: 28  seconds  train loss: 0.5480774052621291 validation loss: 0.6194377259828558
+epoch 63 time used: 27  seconds  train loss: 0.5467358858113947 validation loss: 0.6189927618895004
+epoch 64 time used: 27  seconds  train loss: 0.5447461103986032 validation loss: 0.6190924137385924
+epoch 65 time used: 27  seconds  train loss: 0.5446629330070735 validation loss: 0.6366782917905209
+epoch 66 time used: 27  seconds  train loss: 0.5429392614710551 validation loss: 0.6116063250831111
+epoch 67 time used: 27  seconds  train loss: 0.5410040165079097 validation loss: 0.6168818675463472
+epoch 68 time used: 27  seconds  train loss: 0.5413927520661063 validation loss: 0.6166357893255813
+epoch 69 time used: 27  seconds  train loss: 0.5394248068756603 validation loss: 0.6249612221373847
+epoch 70 time used: 28  seconds  train loss: 0.5397069676332759 validation loss: 0.6162848979679506
+epoch 71 time used: 27  seconds  train loss: 0.5403253429729603 validation loss: 0.6225372552871704
+epoch 72 time used: 27  seconds  train loss: 0.5403881193394342 validation loss: 0.6178579201449209
+epoch 73 time used: 27  seconds  train loss: 0.5375512692531516 validation loss: 0.6206868338347667
+epoch 74 time used: 27  seconds  train loss: 0.5367992197297207 validation loss: 0.6226235651851293
+epoch 75 time used: 27  seconds  train loss: 0.5363503000983812 validation loss: 0.6173579692840576
+Early stopping at epoch: 76
+YS.shape, YS_pred.shape, (6428, 12, 492, 1) (6428, 12, 492, 1)
+YS.shape, YS_pred.shape, (6428, 12, 492) (6428, 12, 492)
+****************************************
+GraphWaveNet, train, Torch MSE, 5.3692690958e-01, 0.5369269096
+GraphWaveNet, train, MSE, RMSE, MAE, MAPE, 22.0087341098, 4.6913467267, 3.5629644329, 31.2676191330
+Model Training Ended ... Fri Nov 11 11:23:45 2022
+pred_SZTAXI_GraphWaveNet_2211111046 testing started Fri Nov 11 11:23:45 2022
+TEST XS.shape, YS.shape (1602, 1, 492, 12) (1602, 12, 492, 1)
+Model Testing Started ... Fri Nov 11 11:23:45 2022
+TIMESTEP_IN, TIMESTEP_OUT 12 12
+YS.shape, YS_pred.shape, (1602, 12, 492, 1) (1602, 12, 492, 1)
+YS.shape, YS_pred.shape, (1602, 12, 492) (1602, 12, 492)
+****************************************
+GraphWaveNet, test, Torch MSE, 5.4794110776e-01, 0.5479411078
+all pred steps, GraphWaveNet, test, MSE, RMSE, MAE, MAPE, 25.5377265038, 5.0534865691, 3.7852392624, 35.2309614420
+1 step, GraphWaveNet, test, MSE, RMSE, MAE, MAPE, 18.3934815262, 4.2887622371, 3.3361861349, 31.9878518581
+2 step, GraphWaveNet, test, MSE, RMSE, MAE, MAPE, 19.4873508361, 4.4144479650, 3.4154079710, 32.5781375170
+3 step, GraphWaveNet, test, MSE, RMSE, MAE, MAPE, 20.6627267567, 4.5456272127, 3.4953911444, 33.1306070089
+4 step, GraphWaveNet, test, MSE, RMSE, MAE, MAPE, 21.9212577766, 4.6820142862, 3.5826993778, 33.7943971157
+5 step, GraphWaveNet, test, MSE, RMSE, MAE, MAPE, 23.1457153451, 4.8109994123, 3.6613115758, 34.3644052744
+6 step, GraphWaveNet, test, MSE, RMSE, MAE, MAPE, 24.7356833262, 4.9734980975, 3.7485968564, 34.9605679512
+7 step, GraphWaveNet, test, MSE, RMSE, MAE, MAPE, 26.4457083746, 5.1425390980, 3.8450815751, 35.6227576733
+8 step, GraphWaveNet, test, MSE, RMSE, MAE, MAPE, 28.1459674087, 5.3052773169, 3.9325575456, 36.2201631069
+9 step, GraphWaveNet, test, MSE, RMSE, MAE, MAPE, 29.2556200982, 5.4088464665, 3.9965558953, 36.6694480181
+10 step, GraphWaveNet, test, MSE, RMSE, MAE, MAPE, 30.3857566134, 5.5123276947, 4.0763807645, 37.3505830765
+11 step, GraphWaveNet, test, MSE, RMSE, MAE, MAPE, 31.4605528188, 5.6089707450, 4.1393175342, 37.8283858299
+12 step, GraphWaveNet, test, MSE, RMSE, MAE, MAPE, 32.5170872856, 5.7023755827, 4.1996197469, 38.3089244366
+Model Testing Ended ... Fri Nov 11 11:23:52 2022
